@@ -59,13 +59,13 @@ let dataBikes = [
 function showBikes() {
     // Destrutturazione
 for (i = 0; i < 8; i++){
-    // console.log(dataBikes[i].Peso);
-    if (dataBikes[i].Peso > 8){
+    let {Nome: a, Peso: b} = dataBikes[i];
+    if (b > 8){
         document.getElementById("showBikesContainer").innerHTML =
         `<div class="d-flex row-12 m-5 bg-primary">
             <h2 class="text-warning text-center align-self-center">Bicicletta con peso minore <h2>
-          <h3 class="text-center text-dark border m-3 p-2 bg-light">Nome: ${(dataBikes[i].Nome)}</h3>
-          <h3 class="text-center text-white border m-3 p-2 bg-secondary">Peso: ${(dataBikes[i].Peso)}</h3>
+          <h3 class="text-center text-dark border m-3 p-2 bg-light">Nome: ${(a)}</h3>
+          <h3 class="text-center text-white border m-3 p-2 bg-secondary">Peso: ${(b)}</h3>
         </div>`
         }
     }
